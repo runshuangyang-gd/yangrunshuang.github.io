@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="yangrs personal blog" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        markdown介绍｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yangrunshuang.github.io/2016/09/10/nodeJs/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    yangrs personal blog
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>markdown介绍</h1>
+                    
+                    <span class="meta">
+                         作者 yangrunshuang
+                        <span>
+                          日期 2016-09-10
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            markdown介绍
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h3 id="客户端和服务器"><a href="#客户端和服务器" class="headerlink" title="客户端和服务器"></a>客户端和服务器</h3><ul>
+<li>任何后台编程语言，只要是web服务器：<ul>
+<li>接受请求</li>
+<li>处理请求</li>
+<li>发送响应<h4 id="什么是Node"><a href="#什么是Node" class="headerlink" title="什么是Node"></a>什么是Node</h4></li>
+</ul>
+</li>
+<li>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<ul>
+<li>NodeJS 是一个构建与 Chrome V8 JavaScript 解析引擎之上的一个运行时环境</li>
+<li>Chrome V8 开源的</li>
+<li>Chrome V8 引擎在所有浏览器的 JavaScript 解析引擎中是最快的</li>
+<li>维基百科 - JavaScript引擎</li>
+</ul>
+</li>
+<li>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.<ul>
+<li>event-driven：事件驱动</li>
+<li>non-blocking I/O model：非阻塞IO模型</li>
+<li>lightweight and efficient：轻量和高效</li>
+<li>Node 本身知识提供了一些系统级别操作API</li>
+</ul>
+</li>
+<li>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.<ul>
+<li>package ecosystem, npm：包管理系统 npm</li>
+<li>largest ecosystem of open source libraries in the world.<ul>
+<li>目前世界上最大的开源库生态系统</li>
+<li>50W + 就好比 Sublime编辑器一样，本身只提供很简单的功能<br>+大部分都需要依靠社区中的插件、包来开发咱们的应用程序<br>+如果英语好，占优势</li>
+<li>npm 两层含义：<ul>
+<li>第一是一用来托管基于Node开发的包的</li>
+<li>第二是一个命令行工具，可以用来下载npm网站上托管的Node包</li>
+<li>有了 npm，就会成为完全傻瓜式的开发</li>
+<li>直接拿来解决你的问题就可以了，能让你更加专注于业务的处理</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Node 是基于 Chrome V8 解析引擎之上构建的一个 JavaScript 运行时环境，或者说平台<ul>
+<li>在 Node 中，可以使用 JavaScript 语言进行编程</li>
+</ul>
+</li>
+<li>Node 能解析和执行 JavaScript（ECMAScript） 代码</li>
+<li>Node 是一个平台，让 JavaScript 可以脱离浏览器环境运行</li>
+<li>Node 自身使用 c++ 语言写出了很多系统级别相关的 API，暴露了一些 JavaScript 环境 API<ul>
+<li>例如文件操作</li>
+<li>网络操作</li>
+<li>。。。</li>
+</ul>
+</li>
+<li>使用 Node 可以轻松的进行文件系统访问、HTTP 服务器开发等功能</li>
+<li>免费开源</li>
+<li>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<ul>
+<li>Node.js 是一个 JavaScript 运行时（也就是可以解析和执行 JavaScript 代码的一个平台）</li>
+<li>Node 不是库、框架，也不是一门新的语言，可以说是一个解析器，可以用来解析和执行 JavaScript 代码</li>
+<li>这里所谓的 JavaScript 是 ECMAScript（if、else、for、var、function、Array、Object）</li>
+<li>Node 是一个平台，或者说是一个执行环境，该环境为 JavaScript 提供了一些环境 API</li>
+<li>JavaScript 语言不仅仅能运行在浏览器环境</li>
+<li>例如：文件操作<img src="http://note.youdao.com/favicon.ico" alt="image">、网络操作 。。。</li>
+<li>Node 构建与 Chrome 浏览器的 V8 JS 解析引擎之上<ul>
+<li>渲染引擎：</li>
+<li>JavaScript 解析执行引擎：解析和执行 JavaScript 代码</li>
+</ul>
+</li>
+<li>Node 把 Chrome 浏览器中的 V8 解析引擎移植了出来，通过基于这个引擎至上 构建了一些环境 API</li>
+<li>具体的环境 API 是通过 C、C++ 代码实现的，然后给上层 JavaScript 暴露接口访问 API</li>
+</ul>
+</li>
+<li>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.<ul>
+<li>Single Thread: 单线程</li>
+<li>event-driven: 事件驱动</li>
+<li>non-blocking I/O model: 非阻塞 I/O 模型<ul>
+<li>同步阻塞型 IO，造成后续代码等待</li>
+<li>异步非阻塞，相当于找了一个人帮你去干活儿，自己继续忙活自己的事情<ul>
+<li>callback</li>
+<li>一般通常的异步调用API往往伴随着一个回调函数来接收返回值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>lightweight and efficient: 轻量和高效</li>
+<li>开源免费</li>
+</ul>
+</li>
+<li><p>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+<h4 id="为什么要学习Node"><a href="#为什么要学习Node" class="headerlink" title="为什么要学习Node"></a>为什么要学习Node</h4><p>Node OS</p>
+</li>
+<li><p>Node 打破了过去 JavaScript 只能在浏览器中运行的局面</p>
+</li>
+<li>好处：<ul>
+<li>前后端编程环境统一，大大降低了前后端语言切换的代价</li>
+<li>不好的地方在于，没有后台编程经验，特别容易分不清前后台代码，因为都是 js</li>
+</ul>
+</li>
+<li>全栈开发工程师<ul>
+<li>后端开发工程师</li>
+<li>前端开发工程师</li>
+<li>移动端开发工程师</li>
+</ul>
+</li>
+<li>前端 + 后端<h4 id="使用-Node-可以做什么"><a href="#使用-Node-可以做什么" class="headerlink" title="使用 Node 可以做什么"></a>使用 Node 可以做什么</h4></li>
+<li></li>
+</ul>
+<ul>
+<li><p>读文件 readFile</p>
+<pre><code>var fs=require(&quot;fs&quot;); 
+fs.writeFile(&quot;./markdown.md&quot;,&quot;utf-8&quot;,function(err,data){
+          if(err){
+              throw err;
+          }
+          console.log(err);
+          console.log(data);
+  })
+</code></pre></li>
+<li><p>写文件 writeFile</p>
+<pre><code>1.第一个参数指定一个文件路径，如果该文件路径不存在，则新建，如果已存在，则覆盖
+2.第二个参数指定要写入的文件内容，默认编码就是utf-8
+  var fs=require(&quot;fs&quot;);
+  fs.writeFile(&quot;./markdown.md&quot;,&quot;内容&quot;,function(err){
+      if(err){
+          throw err;
+      }
+  })
+</code></pre></li>
+<li><p>http.js</p>
+<pre><code>加载用来构建HTTP服务器的核心模块
+var http=require(&quot;http&quot;);
+var fs=require(&quot;fs&quot;);
+1.创建一个HTTP服务器，得到一个server实例对象
+  var server=http.createServer();
+2.监听server对象的request请求事件，设置相应的事件回调处理函数，请求处理函数需要接收两个参数，分别是request请求对象和response响应对象
+  request请求对象：可以用来获取当前请求的一些信息，例如请求路径、请求方法、请求报文数据等。。。
+  response响应对象：可以用来给当前请求发送响应
+ server.on(&quot;request&quot;,function(request，response){
+  //为了解决中文乱码的问题，可以通过在响应头中加入Content-Type字段来告诉客户端本次响应的数据
+  //response.writeHead需要接收三个参数：1.响应状态码2.响应状态短语，可选参数3.响应头字段，是一个对象，键值对的形式表示
+  response.writeHead(200,{
+      &quot;Content-Type&quot;:&quot;text/plain;charset=utf-8&quot;
+  });
+  //write方法可以多次写入响应数据
+      response.write(&quot;hello world&quot;);
+  //可以通过请求对象拿到当前请求的一些数据，例如请求路径、方法等信息
+     var url=request.url;
+      if(url===&quot;/&quot;){
+          fs.readFile(&quot;./index.html&quot;,&quot;utf-8&quot;,function(err,data){
+      if(err){
+          throw err;
+      }
+        response.end(data);
+      });
+      }else if(url===&quot;/login&quot;){
+      fs.readFile(&quot;./login.html&quot;,&quot;utf-8&quot;,function(err,data){
+      if(err){
+          throw err;
+      }
+           response.end(data);
+      });
+      }else if(url===&quot;/about&quot;){
+      fs.readFile(&quot;./about.html&quot;,&quot;utf-8&quot;,function(err,data){
+      if(err){
+          throw err;
+      }
+       response.end(data);
+      });
+      }else{
+           response.end(&quot;&lt;h1&gt;404 Not Found&lt;/h1&gt;&quot;);
+      }
+      }
+  //写入相应数据之后，一定要记得结束响应，否则客户端会认为你的数据没有发送完，可以使用response.end方法手动结束响应
+  })
+3.调用server对象的listen方法，绑定一个端口号，开启服务器
+  server.listen(3000,function(){
+      console.log(&quot;server is running at port 3000&quot;);
+  })
+</code></pre></li>
+</ul>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2012/03/10/git&github studyNote/" data-toggle="tooltip" data-placement="top"
+                           title="git&github">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#客户端和服务器"><span class="toc-text">客户端和服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是Node"><span class="toc-text">什么是Node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么要学习Node"><span class="toc-text">为什么要学习Node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用-Node-可以做什么"><span class="toc-text">使用 Node 可以做什么</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; yangrs personal blog 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yangrunshuang.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>
