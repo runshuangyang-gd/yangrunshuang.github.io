@@ -221,6 +221,265 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-canvas炫酷特效" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/14/canvas炫酷特效/" class="article-date">
+      <time datetime="2016-11-14T07:01:56.011Z" itemprop="datePublished">2016-11-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>canvas的倒计时效果</title>
+    <!-- <script type="text/javascript" src="js/countdown.js"></script>
+    <script type="text/javascript" src="js/digit.js"></script> -->
+  </head>
+  <body>
+    <canvas id="canvas" width="600px" height="600px"></canvas>
+    <script>
+      var WINDOW_WIDTH = 1024 ;
+      var WINDOW_HEIGHT = 768 ;
+      var RADIUS = 8 ;
+      var MARGIN_TOP = 60 ;
+      var MARGIN_LEFT = 30 ;
+
+window.onload = function ( ) {
+  
+  var canvas = document.getElementById('canvas');
+  var context=canvas.getContext('2d');
+  
+  canvas.width = WINDOW_WIDTH;
+  canvas.height =WINDOW_HEIGHT;
+  
+  render( context );
+}
+
+function  render (  cxt ) {
+  
+  var hours = 12 ;
+  var minutes = 34 ;
+  var second = 56 ;
+  
+  renderDigit(  MARGIN_LEFT , MARGIN_TOP , parseInt(hours/10) , cxt) ;
+  renderDigit(  MARGIN_LEFT + 15*( RADIUS + 1 ) , MARGIN_TOP , parseInt(hours%10) , cxt) ;
+  
+  renderDigit(  MARGIN_LEFT + 30*( RADIUS + 1 ) , MARGIN_TOP , 10 , cxt) ;
+  
+  renderDigit(  MARGIN_LEFT + 39*( RADIUS + 1 ) , MARGIN_TOP , parseInt(minutes/10) , cxt) ;
+  renderDigit(  MARGIN_LEFT + 54*( RADIUS + 1 ) , MARGIN_TOP , parseInt(minutes%10) , cxt) ;
+  
+  renderDigit(  MARGIN_LEFT + 69*( RADIUS + 1 ) , MARGIN_TOP , 10 , cxt) ;
+  
+  renderDigit(  MARGIN_LEFT + 78*( RADIUS + 1 ) , MARGIN_TOP , parseInt(second/10) , cxt) ;
+  renderDigit(  MARGIN_LEFT + 93*( RADIUS + 1 ) , MARGIN_TOP , parseInt(second%10) , cxt) ;  
+}
+var digit =
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,1,1,0],
+            [0,1,1,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,1,1,0],
+            [0,1,1,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ]//:10
+    ]
+function renderDigit ( x , y , num , cxt ) {
+  
+  cxt.fillStyle = ' rgb ( 0 , 102 , 153 ) ' ;
+  
+  for ( var i = 0 ; i < digit[ num ].length ; i++){
+    for ( var j = 0 ; j < digit[ num ].length ; j++){
+      if ( digit[ num ][ i ][ j ] == 1 ){
+        cxt.beginPath ( );
+        cxt.arc ( x + j * 2 * ( RADIUS + 1 ) + ( RADIUS + 1 ) , y + i * 2 * ( RADIUS + 1 ) + ( RADIUS + 1 ) , RADIUS , 0 , 2*Math.PI);
+        cxt.closePath( );
+        cxt.fill( );       
+      }
+    }
+  }
+}
+  
+    </script>
+  </body>
+</html>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+            var yiliaConfig = {
+            fancybox: true,
+            mathjax: true,
+            animate: true,
+            isHome: true,
+            isPost: false,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false
+            }
+        </script>
+        
+
+  
     <article id="post-页面优化相关考虑" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
