@@ -3,14 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>yangrs personal blog</title>
+  <title>JS常见面试题 | yangrs personal blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yangrs personal blog">
-<meta property="og:url" content="http://yangrunshuang.github.io/index.html">
+  <meta name="description" content="JS 中this的指向：
+this的指向在函数定义的时候是确定不了的，只有在函数执行的时候才能确定this到底指向谁，实际上this最终指向那个调用它的对象
+情况一：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，（这里需要说明的是在JS严格版中this指向的不是window，而是undefined）
+情况二：如果一个函数中有this，这个函数有被上一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS常见面试题">
+<meta property="og:url" content="http://yangrunshuang.github.io/2014/06/25/JS常见面试题/index.html">
 <meta property="og:site_name" content="yangrs personal blog">
+<meta property="og:description" content="JS 中this的指向：
+this的指向在函数定义的时候是确定不了的，只有在函数执行的时候才能确定this到底指向谁，实际上this最终指向那个调用它的对象
+情况一：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，（这里需要说明的是在JS严格版中this指向的不是window，而是undefined）
+情况二：如果一个函数中有this，这个函数有被上一">
+<meta property="og:updated_time" content="2016-11-14T01:20:49.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yangrs personal blog">
+<meta name="twitter:title" content="JS常见面试题">
+<meta name="twitter:description" content="JS 中this的指向：
+this的指向在函数定义的时候是确定不了的，只有在函数执行的时候才能确定this到底指向谁，实际上this最终指向那个调用它的对象
+情况一：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，（这里需要说明的是在JS严格版中this指向的不是window，而是undefined）
+情况二：如果一个函数中有this，这个函数有被上一">
   
     <link rel="alternative" href="/atom.xml" title="yangrs personal blog" type="application/atom+xml">
   
@@ -20,9 +33,6 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
   
 </head>
 <body>
@@ -219,766 +229,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-nodeJs" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/09/10/nodeJs/" class="article-date">
-      <time datetime="2016-09-09T16:00:00.000Z" itemprop="datePublished">2016-09-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/10/nodeJs/">markdown介绍</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="客户端和服务器"><a href="#客户端和服务器" class="headerlink" title="客户端和服务器"></a>客户端和服务器</h3><ul>
-<li>任何后台编程语言，只要是web服务器：<ul>
-<li>接受请求</li>
-<li>处理请求</li>
-<li>发送响应<h4 id="什么是Node"><a href="#什么是Node" class="headerlink" title="什么是Node"></a>什么是Node</h4></li>
-</ul>
-</li>
-<li>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<ul>
-<li>NodeJS 是一个构建与 Chrome V8 JavaScript 解析引擎之上的一个运行时环境</li>
-<li>Chrome V8 开源的</li>
-<li>Chrome V8 引擎在所有浏览器的 JavaScript 解析引擎中是最快的</li>
-<li>维基百科 - JavaScript引擎</li>
-</ul>
-</li>
-<li>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.<ul>
-<li>event-driven：事件驱动</li>
-<li>non-blocking I/O model：非阻塞IO模型</li>
-<li>lightweight and efficient：轻量和高效</li>
-<li>Node 本身知识提供了一些系统级别操作API</li>
-</ul>
-</li>
-<li>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.<ul>
-<li>package ecosystem, npm：包管理系统 npm</li>
-<li>largest ecosystem of open source libraries in the world.<ul>
-<li>目前世界上最大的开源库生态系统</li>
-<li>50W + 就好比 Sublime编辑器一样，本身只提供很简单的功能<br>+大部分都需要依靠社区中的插件、包来开发咱们的应用程序<br>+如果英语好，占优势</li>
-<li>npm 两层含义：<ul>
-<li>第一是一用来托管基于Node开发的包的</li>
-<li>第二是一个命令行工具，可以用来下载npm网站上托管的Node包</li>
-<li>有了 npm，就会成为完全傻瓜式的开发</li>
-<li>直接拿来解决你的问题就可以了，能让你更加专注于业务的处理</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Node 是基于 Chrome V8 解析引擎之上构建的一个 JavaScript 运行时环境，或者说平台<ul>
-<li>在 Node 中，可以使用 JavaScript 语言进行编程</li>
-</ul>
-</li>
-<li>Node 能解析和执行 JavaScript（ECMAScript） 代码</li>
-<li>Node 是一个平台，让 JavaScript 可以脱离浏览器环境运行</li>
-<li>Node 自身使用 c++ 语言写出了很多系统级别相关的 API，暴露了一些 JavaScript 环境 API<ul>
-<li>例如文件操作</li>
-<li>网络操作</li>
-<li>。。。</li>
-</ul>
-</li>
-<li>使用 Node 可以轻松的进行文件系统访问、HTTP 服务器开发等功能</li>
-<li>免费开源</li>
-<li>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine.<ul>
-<li>Node.js 是一个 JavaScript 运行时（也就是可以解析和执行 JavaScript 代码的一个平台）</li>
-<li>Node 不是库、框架，也不是一门新的语言，可以说是一个解析器，可以用来解析和执行 JavaScript 代码</li>
-<li>这里所谓的 JavaScript 是 ECMAScript（if、else、for、var、function、Array、Object）</li>
-<li>Node 是一个平台，或者说是一个执行环境，该环境为 JavaScript 提供了一些环境 API</li>
-<li>JavaScript 语言不仅仅能运行在浏览器环境</li>
-<li>例如：文件操作、网络操作 。。。</li>
-<li>Node 构建与 Chrome 浏览器的 V8 JS 解析引擎之上<ul>
-<li>渲染引擎：</li>
-<li>JavaScript 解析执行引擎：解析和执行 JavaScript 代码</li>
-</ul>
-</li>
-<li>Node 把 Chrome 浏览器中的 V8 解析引擎移植了出来，通过基于这个引擎至上 构建了一些环境 API</li>
-<li>具体的环境 API 是通过 C、C++ 代码实现的，然后给上层 JavaScript 暴露接口访问 API</li>
-</ul>
-</li>
-<li>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.<ul>
-<li>Single Thread: 单线程</li>
-<li>event-driven: 事件驱动</li>
-<li>non-blocking I/O model: 非阻塞 I/O 模型<ul>
-<li>同步阻塞型 IO，造成后续代码等待</li>
-<li>异步非阻塞，相当于找了一个人帮你去干活儿，自己继续忙活自己的事情<ul>
-<li>callback</li>
-<li>一般通常的异步调用API往往伴随着一个回调函数来接收返回值</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>lightweight and efficient: 轻量和高效</li>
-<li>开源免费</li>
-</ul>
-</li>
-<li><p>Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
-<h4 id="为什么要学习Node"><a href="#为什么要学习Node" class="headerlink" title="为什么要学习Node"></a>为什么要学习Node</h4><p>Node OS</p>
-</li>
-<li><p>Node 打破了过去 JavaScript 只能在浏览器中运行的局面</p>
-</li>
-<li>好处：<ul>
-<li>前后端编程环境统一，大大降低了前后端语言切换的代价</li>
-<li>不好的地方在于，没有后台编程经验，特别容易分不清前后台代码，因为都是 js</li>
-</ul>
-</li>
-<li>全栈开发工程师<ul>
-<li>后端开发工程师</li>
-<li>前端开发工程师</li>
-<li>移动端开发工程师</li>
-</ul>
-</li>
-<li>前端 + 后端<h4 id="使用-Node-可以做什么"><a href="#使用-Node-可以做什么" class="headerlink" title="使用 Node 可以做什么"></a>使用 Node 可以做什么</h4></li>
-<li></li>
-</ul>
-<ul>
-<li><p>读文件 readFile</p>
-<pre><code>var fs=require(&quot;fs&quot;); 
-fs.writeFile(&quot;./markdown.md&quot;,&quot;utf-8&quot;,function(err,data){
-          if(err){
-              throw err;
-          }
-          console.log(err);
-          console.log(data);
-  })
-</code></pre></li>
-<li><p>写文件 writeFile</p>
-<pre><code>1.第一个参数指定一个文件路径，如果该文件路径不存在，则新建，如果已存在，则覆盖
-2.第二个参数指定要写入的文件内容，默认编码就是utf-8
-  var fs=require(&quot;fs&quot;);
-  fs.writeFile(&quot;./markdown.md&quot;,&quot;内容&quot;,function(err){
-      if(err){
-          throw err;
-      }
-  })
-</code></pre></li>
-<li><p>http.js</p>
-<pre><code>加载用来构建HTTP服务器的核心模块
-var http=require(&quot;http&quot;);
-var fs=require(&quot;fs&quot;);
-1.创建一个HTTP服务器，得到一个server实例对象
-  var server=http.createServer();
-2.监听server对象的request请求事件，设置相应的事件回调处理函数，请求处理函数需要接收两个参数，分别是request请求对象和response响应对象
-  request请求对象：可以用来获取当前请求的一些信息，例如请求路径、请求方法、请求报文数据等。。。
-  response响应对象：可以用来给当前请求发送响应
- server.on(&quot;request&quot;,function(request，response){
-  //为了解决中文乱码的问题，可以通过在响应头中加入Content-Type字段来告诉客户端本次响应的数据
-  //response.writeHead需要接收三个参数：1.响应状态码2.响应状态短语，可选参数3.响应头字段，是一个对象，键值对的形式表示
-  response.writeHead(200,{
-      &quot;Content-Type&quot;:&quot;text/plain;charset=utf-8&quot;
-  });
-  //write方法可以多次写入响应数据
-      response.write(&quot;hello world&quot;);
-  //可以通过请求对象拿到当前请求的一些数据，例如请求路径、方法等信息
-     var url=request.url;
-      if(url===&quot;/&quot;){
-          fs.readFile(&quot;./index.html&quot;,&quot;utf-8&quot;,function(err,data){
-      if(err){
-          throw err;
-      }
-        response.end(data);
-      });
-      }else if(url===&quot;/login&quot;){
-      fs.readFile(&quot;./login.html&quot;,&quot;utf-8&quot;,function(err,data){
-      if(err){
-          throw err;
-      }
-           response.end(data);
-      });
-      }else if(url===&quot;/about&quot;){
-      fs.readFile(&quot;./about.html&quot;,&quot;utf-8&quot;,function(err,data){
-      if(err){
-          throw err;
-      }
-       response.end(data);
-      });
-      }else{
-           response.end(&quot;&lt;h1&gt;404 Not Found&lt;/h1&gt;&quot;);
-      }
-      }
-  //写入相应数据之后，一定要记得结束响应，否则客户端会认为你的数据没有发送完，可以使用response.end方法手动结束响应
-  })
-3.调用server对象的listen方法，绑定一个端口号，开启服务器
-  server.listen(3000,function(){
-      console.log(&quot;server is running at port 3000&quot;);
-  })
-</code></pre></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-        <script>
-            var yiliaConfig = {
-            fancybox: true,
-            mathjax: true,
-            animate: true,
-            isHome: true,
-            isPost: false,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: false
-            }
-        </script>
-        
-
-  
-    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/03/05/markdown/" class="article-date">
-      <time datetime="2015-03-04T16:00:00.000Z" itemprop="datePublished">2015-03-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/05/markdown/">markdown介绍</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><a href="http://192.168.32.96:9999/" target="_blank" rel="external">http://192.168.32.96:9999/</a></p>
-<ul>
-<li>轻量级标记语言（html、xml），2004年被<code>john Gruber</code>创造，它允许人们“使用易读易写的纯文本格式编写文档“，<br>Markdown最重要的设计是可读性，markdown可以选择性的转换为文档格式。</li>
-</ul>
-<h3 id="markdown的优点"><a href="#markdown的优点" class="headerlink" title="markdown的优点"></a>markdown的优点</h3><ul>
-<li>纯文本，所以兼容性极强，可以用所有文本编辑器打开</li>
-<li>专注于文字写作而不是排版</li>
-<li>格式转换方便，可以轻松转换为HTML、PPT、电子书等</li>
-<li>markdown标记语法简单好记，可读性强</li>
-</ul>
-<h3 id="markdown基本语法"><a href="#markdown基本语法" class="headerlink" title="markdown基本语法"></a>markdown基本语法</h3><ul>
-<li>标题（#1—#6）</li>
-<li>段落（段落之间有一个空格行）</li>
-<li>粗体（**文字**或<strong>文字</strong>）</li>
-<li>子列表（一级子列表-  ，二级子列表+，  三级子列表*）</li>
-<li><p>有序列表</p>
-<ol>
-<li><p>一级标题</p>
-<p>  1.子标题（）</p>
-</li>
-</ol>
-</li>
-<li><p>无序列表</p>
-<ol>
-<li>一级标题<ul>
-<li>子标题</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>链接</li>
-</ul>
-<p>[百度一下]（<a href="http://baidu.com）" target="_blank" rel="external">http://baidu.com）</a></p>
-<ul>
-<li>图片</li>
-</ul>
-<p><img src="./img/word.jpg" alt="word"></p>
-<ul>
-<li><p>斜体（前后加<em>）
-  </em>文本*</p>
-</li>
-<li><p>行内代码引用（&gt;）</p>
-</li>
-<li>多行代码引用（）</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo=<span class="string">`bar`</span>;</div><div class="line"><span class="built_in">console</span>.log(foo);</div></pre></td></tr></table></figure>
-   <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">使用<span class="keyword">var</span>定义一个foo变量</div><div class="line"><span class="keyword">var</span> foo=<span class="string">`bar`</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li>表格</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">header 1</th>
-<th style="text-align:left">header 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">row 1 col 1</td>
-<td style="text-align:left">row 1 col 2</td>
-</tr>
-<tr>
-<td style="text-align:right">row 2 col 1</td>
-<td style="text-align:left">row 2 col 2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="markdown的使用"><a href="#markdown的使用" class="headerlink" title="markdown的使用"></a>markdown的使用</h2><ul>
-<li>在HTML页面中书写markdown<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">   &lt;script src=<span class="string">"code/node_modules/marked/lib/marked.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;textarea name=<span class="string">""</span> id=<span class="string">"content"</span> cols=<span class="string">"100"</span> rows=<span class="string">"20"</span>&gt;&lt;/textarea&gt;</div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"container"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    <span class="built_in">console</span>.log(marked(<span class="string">"# Marked in browser\n\nRendered by **marked**."</span>));</div><div class="line">    <span class="built_in">document</span>.querySelector(<span class="string">"#content"</span>).addEventListener(<span class="string">"keyup"</span>,<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> htmlStr=marked(<span class="keyword">this</span>.value);</div><div class="line">    <span class="built_in">document</span>.querySelector(<span class="string">".container"</span>).innerHTML=htmlStr;</div><div class="line">    &#125;)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="npm-Node-Package-Manager"><a href="#npm-Node-Package-Manager" class="headerlink" title="npm(Node Package Manager)"></a>npm(Node Package Manager)</h4><p>Npm是一个用来安装和管理Node包和前端包的一个工具</p>
-<p>Node是一个执行环境，Node可以用来执行JavaScript代码，（这里的JS指的是ECMAScript），npm基于Node环境的API（网络操作API、文件操作API）编写的工具，可以用来下载第三方包到指定的目录中。</p>
-<p>它有两层含义：</p>
-<ul>
-<li>npm网站：<a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a><ul>
-<li>一是提供了一个用来共享或者检索的一个平台</li>
-<li>二是托管node环境或者浏览器环境用到的一些第三方包</li>
-</ul>
-</li>
-<li>是一个命令行工具，可以用来下载npm网站上托管的包</li>
-</ul>
-<h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><pre><code>在终端程序中输入node -v检测node版本
-安装node环境的时候，已经自动安装了npm命令行 工具，不需要单独安装，可以通过`npm -v`测试npm是否可用
-</code></pre><h4 id="本地安装："><a href="#本地安装：" class="headerlink" title="本地安装："></a>本地安装：</h4><pre><code>一般是在项目中，安装项目使用的依赖包，例如jQuery就可以在终端中切换到项目的根目录，然后执行`npm install jquery`,npm工具会自动将jQuery这个包下载下来后放到`node_modules`目录中，node_modules目录如果不存在会新建，如果已存在，则直接将下载的包放到该目录中
-</code></pre><h4 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h4><pre><code>一般用于安装一些命令行工具（这些工具也是基于Node开发的）
-全局安装使用`npm install --global包名（工具名）`，在任意目录执行该命令都可以
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-        <script>
-            var yiliaConfig = {
-            fancybox: true,
-            mathjax: true,
-            animate: true,
-            isHome: true,
-            isPost: false,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: false
-            }
-        </script>
-        
-
-  
-    <article id="post-git&amp;SeaJs studyNote" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/12/03/git&SeaJs studyNote/" class="article-date">
-      <time datetime="2014-12-02T16:00:00.000Z" itemprop="datePublished">2014-12-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/03/git&SeaJs studyNote/">git&amp;SeaJs</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <ul>
-<li><code>&lt;a href=&quot;#meinv&quot;&gt;美女&lt;/a&gt;</code></li>
-<li><code>&lt;a name=&quot;meinv&quot;&gt;&lt;/a&gt;</code><h4 id="一段代码的执行时间测试："><a href="#一段代码的执行时间测试：" class="headerlink" title="一段代码的执行时间测试："></a>一段代码的执行时间测试：</h4></li>
-<li>console.time(“a”);</li>
-<li>for(var i=0;i&lt;1000;i++){}</li>
-<li>console.timeEnd(“a”);</li>
-<li>执行结果为：a:  3ms<h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4></li>
-<li>git 是一个版本控制管理工具：保存历史记录，多人协同交互</li>
-</ul>
-<p>分布式版本控制： </p>
-<ul>
-<li>1.用户没有源代码的情况下，使用git clone命令将服务器上的源代码仓库克隆到本地生成一个本地仓库</li>
-<li>2.用户本地对于任何文件的添加、删除、修改都不能直接越过暂存区，本地仓库从而进入远程仓库<ul>
-<li>正确的做法：                <ul>
-<li>.将用户添加、修改、删除的文件添加到暂存区，通过git add命令将要保存的历史记录的文件作为待提交列表。暂存区叫临时仓库或待提交列表</li>
-<li>.使用git commit命令将暂存区中的待提交列表提交到本地仓库，真正形成一个历史快照</li>
-<li>.通过git push可以将本地仓库提交到远程仓库服务器</li>
-<li>.通过git pull拉取远程仓库最新源代码</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>集中式版本控制：</p>
-<ul>
-<li>优点：简单</li>
-<li>缺点：<ul>
-<li>1.提交历史记录必须联网</li>
-<li>2.服务器一旦宕机，版本控制系统就没有用了</li>
-<li>3.服务器一旦数据丢失，软件源代码仓库也会丢失</li>
-</ul>
-</li>
-</ul>
-<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><ul>
-<li>模块化是指解决一个复杂问题时自顶向下逐层把系统划分成若干模块的过程，有多种属性，分别反映其内部特性，是解决复杂问题的一种方式</li>
-<li>使用模块化可以提高生产效率，代码的可维护性高<h4 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h4>-理论意义上减少了变量的冲突</li>
-<li>缺点：<ul>
-<li>暴露了模块中的所有成员，内部状态可以被外部改写，不安全</li>
-<li>命名空间会越来越长<h4 id="私有空间"><a href="#私有空间" class="headerlink" title="私有空间"></a>私有空间</h4></li>
-</ul>
-</li>
-<li>私有空间的变量和函数不会影响全局作用域</li>
-<li>公开公有方法，隐藏私有属性<h4 id="模块的维护和扩展"><a href="#模块的维护和扩展" class="headerlink" title="模块的维护和扩展"></a>模块的维护和扩展</h4></li>
-<li>开闭原则</li>
-<li>可维护性好<h4 id="模块的第三方依赖"><a href="#模块的第三方依赖" class="headerlink" title="模块的第三方依赖"></a>模块的第三方依赖</h4></li>
-<li>保证模块的独立性</li>
-<li>模块之间的关系变得明显<h2 id="常见的JavaScript模块化规范"><a href="#常见的JavaScript模块化规范" class="headerlink" title="常见的JavaScript模块化规范"></a>常见的JavaScript模块化规范</h2></li>
-<li>CommonJS<ul>
-<li>Node.js</li>
-</ul>
-</li>
-<li>AMD<ul>
-<li>Require.js</li>
-</ul>
-</li>
-<li>CMD(Common Module Definition)<ul>
-<li>CMD就是SeaJs这个模块加载器在推广的过程中定义的一个模块规范</li>
-</ul>
-</li>
-<li>ECMAScript<br>+ECMAScript6</li>
-<li>UMD</li>
-<li>electron<ul>
-<li>使用 HTML+CSS+JavaScript+Node 构建跨平台桌面应用程序</li>
-</ul>
-</li>
-<li>总结：<ul>
-<li>CMD、AMD、CommonJS都是社区制定出来的模块化规范，他们的目的都是为了解决JavaScript没有模块化系统的问题，他们都有如何定义模块成员，以及模块成员之间如何进行通信交互的规则</li>
-<li>2015年9月份，ECMAScript官方推出了ECMAScript6语言标准。在最新的ES6语言规范标准中制定了JAVAScript模块化规范，通过export和import两个关键字来作为交互规则</li>
-<li>ES6才是未来的趋势，以后的大一统<h2 id="SeaJs"><a href="#SeaJs" class="headerlink" title="SeaJs"></a>SeaJs</h2></li>
-</ul>
-</li>
-<li>SeaJs遵循的是CMD规范</li>
-<li>SeaJs是一个适用于web浏览器端的模块加载器，在SeaJs中，一切皆是模块，所有模块协同构建成模块系统</li>
-<li>SeaJs可以提高代码的可维护性，如果一个网站的JS文件超过3个，就适合用SeaJs来组织和维护代码，涉及的JS文件越多，SeaJS就越适合</li>
-<li>淘宝网、支付宝、京东、爱奇艺。。。都在使用SeaJs<h4 id="模块是什么"><a href="#模块是什么" class="headerlink" title="模块是什么"></a>模块是什么</h4></li>
-<li>一个模块，可以是JS模块，也可以是css模块，或者是template等模块，而SeaJs则专注于JS文件模块<ul>
-<li>模块是一段JavaScript代码，具有统一的基本书写格式</li>
-<li>模块之间通过基本<strong>交互规则</strong>，能彼此引用，协同工作<br>+在SeaJs中，一个JS脚本文件就是一个模块</li>
-</ul>
-</li>
-<li>模块具有两个特性<ul>
-<li>模块要有一个私有作用域：避免全局命名空间污染</li>
-<li>模块可以向外导出内部成员，供别的模块使用</li>
-</ul>
-</li>
-<li>所以，只要使用了SeaJs，那所有的js文件都通过define函数来定义该模块，并且将所有的模块代码写到define定义的回调函数中<ul>
-<li>define方法的回调函数中分别传递三个参数：require、exports、module </li>
-</ul>
-</li>
-<li>每一个模块中有一个require函数，可以用来加载指定模块，需要接收一个模块路径<ul>
-<li>加载指定模块并且执行该模块中的代码</li>
-<li>得到该模块中的暴露的接口对象：module.exports<h4 id="模块的作用域和导出："><a href="#模块的作用域和导出：" class="headerlink" title="模块的作用域和导出："></a>模块的作用域和导出：</h4></li>
-</ul>
-</li>
-<li><p>模块本身就是一个私有作用域，在该模块内部定义的所有成员默认都是该模块私有的，如果模块内部定义的成员想要被外部所访问，必须通过module.exports对象向外暴露，require函数加载模块的时候，会自动拿到模块内部的module.exports对象</p>
-<pre><code>define(function (require, exports, module) {
-var foo = &apos;bar&apos;;
-function add(x, y) {
-  return x - y;
-   }
-console.log(&apos;main.js 文件模块被加载和执行了&apos;);
-var aModule = require(&apos;./a&apos;);
-  }
-</code></pre><h4 id="css中-import模块化的使用"><a href="#css中-import模块化的使用" class="headerlink" title="css中@import模块化的使用"></a>css中@import模块化的使用</h4></li>
-<li>1.在index.html页面中引入main.css样式文件</li>
-<li>2.在main.css文件中通过在首行编辑@import url(box.css)这段代码引入另一个box.css样式文件<h4 id="SeaJs中模块化的使用"><a href="#SeaJs中模块化的使用" class="headerlink" title="SeaJs中模块化的使用"></a>SeaJs中模块化的使用</h4></li>
-<li>1.在index.html文件中通过<script src="../node_modules/seajs/dist/sea.js"></script>这段代码引入sea.js文件，并且通过seajs.use(“./js/main”)引入main.js文件</li>
-<li><p>在main.js文件中通过使用</p>
-<pre><code>  define(function(require,exports,module){
-var $=require(&apos;../../node_modules/jquery/dist/jquery&apos;);
-  //如果想要拿到jQuery接口对象，那么jQuery.js文件内部必须显示的通过module.exports向外暴露
-var cal=require(&quot;./cal/index&quot;);
-</code></pre><p>})</p>
-<h4 id="requirejs中模块化的使用"><a href="#requirejs中模块化的使用" class="headerlink" title="requirejs中模块化的使用"></a>requirejs中模块化的使用</h4></li>
-<li>在index.html文件中通过<script data-main="./js/main.js" src="../node_modules/requirejs/require.js"></script>这段代码引入main.js文件</li>
-<li><p>在main.js文件中首先配置路径，如果配置了基础路径，那么所有的模块都会基于这个路径去查找。使用require.js,主模块通过requirejs方法启动加载，requirejs第一个参数是一个数组，传递依赖的模块</p>
-<pre><code>requirejs.config({
- baseUrl: &apos;./js&apos;;
- })
- 使用 requirejs ，主模块通过 requirejs 方法启动加载
- // requirejs 第一个参数是一个数组，传递依赖的模块
-  requirejs([&apos;a&apos;, &apos;b&apos;, &apos;jquery&apos;], function (aModule, bModule, $) {
-    console.log(aModule);
-    console.log(bModule);
-    $(function () {
-      window.alert(&apos;jquery 可以使用了&apos;);
-    })
-  })
-</code></pre></li>
-<li><p>在a.js文件中定义一个没有任何依赖的模块，默认define内部就是一个私有作用域，可以通过return的形式向外暴露接口对象</p>
-<pre><code>define(&apos;a&apos;,[],function () {
-  return {
-      name: &apos;aaa&apos;,
-      test: function () {
-      console.log(&apos;aaa&apos;)
-  }
-}
-</code></pre><p>  })</p>
-</li>
-<li><p>同样的在b.js文件中定义一个有依赖的模块</p>
-<pre><code>define([&apos;./c&apos;], function (c) {
-  console.log(c);
-  return {
-    name: &apos;bbb&apos;,
-    test: function () {
-      console.log(&apos;bbb&apos;)
-    }
-  }
-})
-</code></pre></li>
-<li><p>在jQuery.js文件中对requirejs模块和SeaJs模块做兼容处理</p>
-<pre><code>  if ( typeof define === &quot;function&quot; &amp;&amp; define.amd ) {
-define( &quot;jquery&quot;, [], function() {
-  return jQuery;
-});
-   }
-  // 改造 jQuery 代码，使之兼容 SeaJS 模块定义模块
-  // 通过下面这种形式判断当前执行环境是否有 cmd 模块加载器（其实也就是判断有没有使用SeaJS）
-  if (typeof define === &apos;function&apos; &amp;&amp; define.cmd) {
-    define(function (require, exports, module) {
-      module.exports = jQuery;
-    });
-  }
-</code></pre><h4 id="有关SeaJs的API详解"><a href="#有关SeaJs的API详解" class="headerlink" title="有关SeaJs的API详解"></a>有关SeaJs的API详解</h4><h4 id="seajs-use"><a href="#seajs-use" class="headerlink" title="seajs.use"></a><code>seajs.use</code></h4></li>
-</ul>
-<p>加载模块，启动模块系统。</p>
-<ul>
-<li>加载一个模块 <code>seajs.use(&#39;id&#39;)</code></li>
-<li>加载一个模块，在加载完成时，执行回调 <code>seajs.use(&#39;id&#39;, callback)</code></li>
-<li><p>加载多个模块，加载完成时，执行回调 <code>seajs.use([&#39;id1&#39;,&#39;id2&#39;,...],callback)</code></p>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>在调用 seajs.use 之前，需要先引入 sea.js 文件</li>
-<li>seajs.use 与 <code>DOM ready</code> 事件没有任何关系。如果某些操作要确保在 <code>DOM ready</code> 后执行，需要使用 jquery 等类库来保证</li>
-<li>seajs.use 理论上只用于加载启动，不应该出现在 <code>define</code> 中的模块代码里</li>
-</ul>
-</li>
-</ul>
-<h4 id="define-factory"><a href="#define-factory" class="headerlink" title="define(factory)"></a><code>define(factory)</code></h4><p><code>define</code> 是一个全局函数，用来定义模块。</p>
-<p><code>define</code> 接受 <code>factory</code> 参数，<code>factory</code> 可以是一个函数，也可以是一个对象或字符串。</p>
-<p><code>factory</code> 为对象、字符串时，表示模块的接口就是该对象、字符串。</p>
-<ul>
-<li><p>factory 是一个对象时</p>
-<ul>
-<li><code>define({})</code></li>
-</ul>
-</li>
-<li><p>factory 是一个字符串时</p>
-<ul>
-<li><code>define(&#39;hello&#39;)</code></li>
-</ul>
-</li>
-<li><p>factory 是一个函数时</p>
-<ul>
-<li><code>define(function(require, exports, module){})</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="require"><a href="#require" class="headerlink" title="require"></a><code>require</code></h4><p>require 用来加载一个 js 文件模块，<br>require 用来获取指定模块的接口对象 <code>module.exports</code>。</p>
-<p>require 在加载和执行的时候，js 会按照同步的方式和执行。</p>
-<p>使用注意：</p>
-<ul>
-<li>正确拼写<ul>
-<li>模块 factory 构造方法的第一个参数 <code>必须</code> 命名为 require</li>
-</ul>
-</li>
-<li>不要修改<ul>
-<li>不要重命名 require 函数，或在任何作用域中给 require 重新赋值</li>
-</ul>
-</li>
-<li>使用字符串直接量<ul>
-<li>require 的参数值 必须 是字符串直接量</li>
-</ul>
-</li>
-</ul>
-<p>Tips: 把 <code>require</code> 看做是语法关键字就好啦</p>
-<h4 id="模块标识"><a href="#模块标识" class="headerlink" title="模块标识"></a>模块标识</h4><p>模块标识是一个字符串，用来标识模块。</p>
-<ul>
-<li><p>模块标识可以不包含文件后缀名，比如 <code>.js</code></p>
-<ul>
-<li>seajs 推荐不加 .js 文件模块后缀</li>
-</ul>
-</li>
-<li><p>模块标识可以是 <strong>相对</strong> 或 <strong>顶级</strong> 标识</p>
-</li>
-<li><p>相对标识</p>
-</li>
-</ul>
-<p>相对标识以 <code>.</code> 开头，永远相对于当前模块所处的路径来解析。</p>
-<ul>
-<li>顶级标识</li>
-</ul>
-<p>顶级标识不以 <code>.</code> 或 <code>/</code> 开始，会相对模块系统的基础路径（base路径，默认是 sea.js 文件所属的路径）。<br>可以手动配置 base 路径。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">seajs.config(&#123;</div><div class="line">  <span class="attr">base</span>: <span class="string">'./js'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<ul>
-<li>普通路径</li>
-</ul>
-<p>除了相对和顶级标识之外的标识都是普通路径。<br>普通路径的解析规则，会相对当前页面解析。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 假设当前页面是 http://example.com/path/to/page/index.html</span></div><div class="line"><span class="comment">// 绝对路径是普通路径：</span></div><div class="line"><span class="built_in">require</span>.resolve(<span class="string">'http://cdn.com/js/a'</span>);</div><div class="line">  <span class="comment">// =&gt; http://cdn.com/js/a.js</span></div><div class="line"><span class="comment">// 根路径是普通路径：</span></div><div class="line"><span class="built_in">require</span>.resolve(<span class="string">'/js/b'</span>);</div><div class="line">  <span class="comment">// =&gt; http://example.com/js/b.js</span></div><div class="line"><span class="comment">// use 中的相对路径始终是普通路径：</span></div><div class="line">seajs.use(<span class="string">'./c'</span>);</div><div class="line">  <span class="comment">// =&gt; 加载的是 http://example.com/path/to/page/c.js</span></div><div class="line">seajs.use(<span class="string">'../d'</span>);</div><div class="line">  <span class="comment">// =&gt; 加载的是 http://example.com/path/to/d.js</span></div></pre></td></tr></table></figure>
-<p><strong>Tips</strong>:</p>
-<ul>
-<li>顶级标识始终相对 <code>base</code> 基础路径解析。<ul>
-<li>如果不设置，base 路径默认就是 sea.js 库文件所属的路径</li>
-<li>可以通过 <code>seajs.config({ base: &#39;基础路径&#39; })</code> 来配置基础路径</li>
-</ul>
-</li>
-<li>绝对路径和根路径始终相对当前页面解析。</li>
-<li>相对标识永远相对于当前文件</li>
-<li><code>seajs.use</code> 中的相对路径始终相对当前页面来解析。</li>
-</ul>
-<h4 id="module"><a href="#module" class="headerlink" title="module"></a>module</h4><p>module 是一个对象，上面存储了与当前模块相关联的一些属性和方法。</p>
-<ul>
-<li><code>module.id</code><ul>
-<li>模块的唯一标识，可以通过 <code>define</code> 方法的第一个参数来指定，默认为该模块文件的绝对路径</li>
-</ul>
-</li>
-<li><code>module.uri</code><ul>
-<li>模块的绝对路径</li>
-</ul>
-</li>
-<li><code>module.dependencies</code><ul>
-<li>dependencies 是一个数组，表示当前模块的依赖</li>
-</ul>
-</li>
-<li><code>module.exports</code><ul>
-<li>当前模块对外提供的接口对象</li>
-<li>相当于每个模块内部最终都执行了这么一句话：<code>return module.exports</code></li>
-<li>模块与模块之间的通信接口</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-3-6-exports"><a href="#4-3-6-exports" class="headerlink" title="4.3.6 exports"></a>4.3.6 exports</h4><p>exports 仅仅是 module.exports 的一个引用。<br>也就是说修改了 exports 就相当于修改了 module.exports。</p>
-<p>但是一旦在 factory 内部给 exports 重新赋值，并不会改变 module.exports 的值。<br>因此给 exports 赋值是无效的。</p>
-<h3 id="4-4-exports-和-module-exports-的区别"><a href="#4-4-exports-和-module-exports-的区别" class="headerlink" title="4.4 exports 和 module.exports 的区别"></a>4.4 exports 和 module.exports 的区别</h3><ul>
-<li>每个模块内部对外到处的接口对象始终都是 <code>module.exports</code></li>
-<li>可以通过修改 <code>module.exports</code> 或给它赋值改变模块接口对象</li>
-<li><code>exports</code> 是 <code>module.exports</code> 的一个引用，就好比在每一个模块定义最开始的地方写了这么一句代码：<code>var exports = module.exports</code></li>
-</ul>
-<p>关于这俩哥们儿的区别请分析一下代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="built_in">module</span> = &#123;</div><div class="line">  <span class="attr">exports</span>: &#123;&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeExports</span> (<span class="params">exports, module</span>) </span>&#123;</div><div class="line">  <span class="comment">// var exports = module.exports</span></div><div class="line">  exports.foo = <span class="string">'bar'</span></div><div class="line"></div><div class="line">  <span class="comment">// 这里赋值拿不到，不要使用使用</span></div><div class="line">  <span class="comment">// exports = function () &#123;&#125;</span></div><div class="line">  <span class="keyword">return</span> <span class="built_in">module</span>.exports</div><div class="line">&#125;</div><div class="line"></div><div class="line">changeExports(<span class="built_in">module</span>.exports, <span class="built_in">module</span>)</div></pre></td></tr></table></figure>
-<p>那为啥要有 <code>exports</code> ？</p>
-<p>为了开发体验，API更友好，使用 exports 的时候，可以少写一个点儿。</p>
-<p>如果你实在分不清楚 <code>exports</code> 和 <code>module.exports</code> 之间的区别，就只记得 <code>module.exports</code> 就可以了。</p>
-<h3 id="4-5-如何将一个普通的模块文件改造为兼容-CMD-规范的模块"><a href="#4-5-如何将一个普通的模块文件改造为兼容-CMD-规范的模块" class="headerlink" title="4.5 如何将一个普通的模块文件改造为兼容 CMD 规范的模块"></a>4.5 如何将一个普通的模块文件改造为兼容 CMD 规范的模块</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> define === <span class="string">"function"</span> &amp;&amp; define.cmd) &#123;</div><div class="line">  <span class="comment">// 有 Sea.js 等 CMD 模块加载器存在</span></div><div class="line">  define(<span class="function"><span class="keyword">function</span> (<span class="params">require, exports, module</span>) </span>&#123;</div><div class="line">    <span class="comment">// 使用 module.exports 向外暴露接口对象</span></div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="4-6-高级配置-seajs-config-options"><a href="#4-6-高级配置-seajs-config-options" class="headerlink" title="4.6 高级配置 seajs.config(options)"></a>4.6 高级配置 <code>seajs.config(options)</code></h3><p>可以对 Sea.js 进行配置，让模块编写、开发调试更方便。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">seajs.config(&#123;</div><div class="line"></div><div class="line">  <span class="comment">// 别名配置</span></div><div class="line">  alias: &#123;</div><div class="line">    <span class="string">'es5-safe'</span>: <span class="string">'gallery/es5-safe/0.9.3/es5-safe'</span>,</div><div class="line">    <span class="string">'json'</span>: <span class="string">'gallery/json/1.0.2/json'</span>,</div><div class="line">    <span class="string">'jquery'</span>: <span class="string">'jquery/jquery/1.10.1/jquery'</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// 路径配置</span></div><div class="line">  paths: &#123;</div><div class="line">    <span class="string">'gallery'</span>: <span class="string">'https://a.alipayobjects.com/gallery'</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// Sea.js 的基础路径</span></div><div class="line">  base: <span class="string">'http://example.com/path/to/base/'</span>,</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h6 id="4-7-使用-SeaJS-开发计算器案例"><a href="#4-7-使用-SeaJS-开发计算器案例" class="headerlink" title="4.7 使用 SeaJS 开发计算器案例"></a>4.7 使用 SeaJS 开发计算器案例</h6><h6 id="4-8-使用-SeaJS-开发拖拽案例"><a href="#4-8-使用-SeaJS-开发拖拽案例" class="headerlink" title="4.8 使用 SeaJS 开发拖拽案例"></a>4.8 使用 SeaJS 开发拖拽案例</h6>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-        <script>
-            var yiliaConfig = {
-            fancybox: true,
-            mathjax: true,
-            animate: true,
-            isHome: true,
-            isPost: false,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: false
-            }
-        </script>
-        
-
-  
-    <article id="post-JS常见面试题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS常见面试题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2014/06/25/JS常见面试题/" class="article-date">
@@ -994,12 +245,19 @@ define( &quot;jquery&quot;, [], function() {
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/06/25/JS常见面试题/">JS常见面试题</a>
+    <h1 class="article-title" itemprop="name">
+      JS常见面试题
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -1653,164 +911,168 @@ var p2=new Person(&quot;喵喵&quot;,&quot;程序猿鼓励师&quot;);</code>v</p
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
     
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-        <script>
-            var yiliaConfig = {
-            fancybox: true,
-            mathjax: true,
-            animate: true,
-            isHome: true,
-            isPost: false,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: false
-            }
-        </script>
-        
-
-  
-    <article id="post-git&amp;github studyNote" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/06/20/git&github studyNote/" class="article-date">
-      <time datetime="2014-06-19T16:00:00.000Z" itemprop="datePublished">2014-06-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/06/20/git&github studyNote/">git&amp;github</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="browser-sync"><a href="#browser-sync" class="headerlink" title="browser-sync"></a>browser-sync</h2><p>官网：<a href="https://browsersync.io/">https://browsersync.io/</a></p>
-<ul>
-<li>必须有node环境</li>
-<li><code>npm install -g browser-sync</code></li>
-<li><code>browser-sync start --server --files &quot;css/*.css, *.html, js/*.js&quot;</code><ul>
-<li>该命令表示启动一个本地服务器，同时监视 –files 指定的文件</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-命令行"><a href="#1-命令行" class="headerlink" title="1. 命令行"></a>1. 命令行</h2><p><img src="img/hack.jpg" alt="黑客帝国"></p>
-<p>在电影中一个“超级黑客”坐在电脑前，从不摸一下鼠标，<br>就能够在 30 秒内侵入到超安全的军事计算机中。</p>
-<p>这是因为电影制片人意识到，作为人类，本能地知道让计算机圆满完成工作的唯一途径，是用键盘来操纵计算机。</p>
-<h4 id="GUI-VS-CLI"><a href="#GUI-VS-CLI" class="headerlink" title="GUI VS CLI"></a>GUI VS CLI</h4><p>现在，大多数的计算机用户只是熟悉图形用户界面（GUI），并且产品供应商和此领域的学<br>者会灌输给用户这样的思想，命令行界面（CLI）是过去使用的一种很恐怖的东西。这就很不<br>幸，因为一个好的命令行界面，是用来和计算机进行交流沟通的非常有效的方式，正像人类社<br>会使用文字互通信息一样。人们说， <strong>图形用户界面让简单的任务更容易完成，而命令行界面<br>使完成复杂的任务成为可能</strong> ，到现在这句话仍然很正确。</p>
-<h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p>一说到命令行，其实真正指的是 <code>shell</code>。</p>
-<p><strong>shell 就是一个程序，它接受从键盘输入的命令，然后把命令传递给操作系统去执行。</strong></p>
-<p>几乎所有的 Linux 发行版都提供一个名为 <code>bash</code> 的 shell 程序。<br>bash 是 <code>Bourne Again SHell</code> 的首字母缩写，所指的是这样一个事实。</p>
-<p><img src="img/shell.jpg" alt="shell"></p>
-<h3 id="终端仿真器"><a href="#终端仿真器" class="headerlink" title="终端仿真器"></a>终端仿真器</h3><p>当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。<br>在 Windows 上，一般使用操作系统自带的 <code>cmd</code> 或者 <code>powershell</code>。<br>在 Linux 上，如果是图形用户界面，那么可以使用 <code>terminal</code> 或者 <code>konsole</code>、<code>gnome-terminal</code> 之类<br>的终端仿真器，但基本上，它们都完成同样的事情，让我们能访问 shell，<br>你可能会因为附加的一些花俏功能而喜欢上某个终端。</p>
-<p>关于名字，如果有人提到：控制台、终端、bash、shell、terminal 等，一般都是指上面这些。</p>
-<p>一般在 Linux 上，都会提供一个 bash 或者 terminal 之类的工具，让你来使用 shell</p>
-<h3 id="1-2-安装-Git-for-Windows-客户端体验-shell"><a href="#1-2-安装-Git-for-Windows-客户端体验-shell" class="headerlink" title="1.2 安装 Git for Windows 客户端体验 shell"></a>1.2 安装 Git for Windows 客户端体验 shell</h3><p>Git for Windows 客户端自带了一个终端仿真器：<code>git bash</code></p>
-<p>下载地址：<a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a></p>
-<p><a href="https://github.com/git-for-windows/git">git for Windows - github 托管地址</a><br>，然后找到 Realease 模块，找到下载的对应版本即可。</p>
-<p>注意：虽然在 Windows 上可以通过 cmd 或 powershell 体验终端的使用，<br>但是学习终端最正确的方式是学习 Linux 上的命令行，要更纯正，更强大。</p>
-<p>所以，我们这里通过使用 Git for Windows 客户端（自带了一个 bash）可以供我们学习 shell。</p>
-<h4 id="打开和退出终端"><a href="#打开和退出终端" class="headerlink" title="打开和退出终端"></a>打开和退出终端</h4><ul>
-<li>开始菜单打开</li>
-<li>右键打开</li>
-<li>通过开始-运行：输入 git-bash 打开（需要PATH环境变量）</li>
-</ul>
-<h4 id="命令提示符"><a href="#命令提示符" class="headerlink" title="命令提示符"></a>命令提示符</h4><h3 id="使用终端操作文件系统"><a href="#使用终端操作文件系统" class="headerlink" title="使用终端操作文件系统"></a>使用终端操作文件系统</h3><ul>
-<li>绝对路径和相对路径</li>
-<li><code>pwd（print working directory）</code></li>
-<li><code>cd（change directory）</code><ul>
-<li>切换到指定路径（相对路径或绝对路径）</li>
-</ul>
-</li>
-<li><code>ls（list files）</code><ul>
-<li><code>ls</code> 列出当前目录文件</li>
-<li><code>ls 目录路径</code> 列出指定路径文件</li>
-<li><code>ls -a</code> 列出文件并显示隐藏文件或目录</li>
-</ul>
-</li>
-<li><code>cp（copy）</code><ul>
-<li><code>cp 源路径 目标路径</code></li>
-<li>cp 在复制目录的时候，不会复制里面的子文件或子目录</li>
-<li>-r （recursive）递归复制</li>
-</ul>
-</li>
-<li><code>mv（move）</code>：移动文件或者目录，还可以重命名文件或目录</li>
-<li><code>mkdir（make directory）</code>：创建目录</li>
-<li><code>rm（remove）</code>：删除文件或目录<ul>
-<li><code>-rf</code> 递归删除：直接将整个目录包括里面的内容都删掉</li>
-</ul>
-</li>
-<li><code>rmdir</code> 目录名称<ul>
-<li>只能删除空目录</li>
-</ul>
-</li>
-<li><code>clear</code>：清屏</li>
-<li><code>touch 文件名</code><ul>
-<li>根据文件名创建新的文件</li>
-</ul>
-</li>
-<li><code>cat 文件名</code><ul>
-<li>查看指定的文本文件</li>
-</ul>
-</li>
-</ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a  href="/2014/06/20/git&github studyNote/#more">more >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2014/06/25/JS常见面试题/">JS常见面试题</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 yangrunshuang 的个人博客">yangrunshuang</a></p>
+        <p><span>发布时间:</span>2014年06月25日 - 00时00分</p>
+        <p><span>最后更新:</span>2016年11月14日 - 09时20分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2014/06/25/JS常见面试题/" title="JS常见面试题">http://yangrunshuang.github.io/2014/06/25/JS常见面试题/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yangrunshuang.github.io/2014/06/25/JS常见面试题/　　作者: yangrunshuang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
-    
-  </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2014/12/03/git&SeaJs studyNote/">
+                    git&amp;SeaJs
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2014/06/20/git&github studyNote/">
+                    git&amp;github
+                </a>
+            </div>
+        
+    </nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+    <style>
+        .toc {
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $(".toc li a").mouseover(function() {
+                var title = $(this).attr('href');
+                $(this).attr("title", title);
+            });
+        })
+    </script>
 
 
 
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2014/12/03/git&SeaJs studyNote/" title="上一篇: git&amp;SeaJs">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2014/06/20/git&github studyNote/" title="下一篇: git&amp;github">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/nodeJs/">markdown介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/05/markdown/">markdown介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/03/git&SeaJs studyNote/">git&SeaJs</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/06/25/JS常见面试题/">JS常见面试题</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/06/20/git&github studyNote/">git&github</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
@@ -1822,8 +1084,8 @@ var p2=new Person(&quot;喵喵&quot;,&quot;程序猿鼓励师&quot;);</code>v</p
             fancybox: true,
             mathjax: true,
             animate: true,
-            isHome: true,
-            isPost: false,
+            isHome: false,
+            isPost: true,
             isArchive: false,
             isTag: false,
             isCategory: false,
@@ -1831,9 +1093,6 @@ var p2=new Person(&quot;喵喵&quot;,&quot;程序猿鼓励师&quot;);</code>v</p
             }
         </script>
         
-
-  
-  
 </div>
       <footer id="footer">
     <div class="outer">
@@ -1861,20 +1120,6 @@ var p2=new Person(&quot;喵喵&quot;,&quot;程序猿鼓励师&quot;);</code>v</p
 </footer>
     </div>
     
-    <script>
-        var yiliaConfig = {
-            fancybox: false,
-            mathjax: true,
-            animate: true,
-            isHome: true,
-            isPost: false,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: false
-        }
-    </script>
-
 
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script src="/js/main.js"></script>
