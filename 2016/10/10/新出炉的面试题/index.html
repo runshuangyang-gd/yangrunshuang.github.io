@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>新出炉的面试题 | yangrs personal blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.以下程序中打印结果是1234var i=999;i---;++i;console.log(i++);//999
+2.请写出输出结果12345var a=new Object();a.value=1;b=a;b.value=2;console,log(a.value);//2
+3.请写出输出结果12345for(var i=1;i&amp;lt;=3;i++)&amp;#123;setTimeout(funct">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新出炉的面试题">
+<meta property="og:url" content="http://yangrunshuang.github.io/2016/10/10/新出炉的面试题/index.html">
+<meta property="og:site_name" content="yangrs personal blog">
+<meta property="og:description" content="1.以下程序中打印结果是1234var i=999;i---;++i;console.log(i++);//999
+2.请写出输出结果12345var a=new Object();a.value=1;b=a;b.value=2;console,log(a.value);//2
+3.请写出输出结果12345for(var i=1;i&amp;lt;=3;i++)&amp;#123;setTimeout(funct">
+<meta property="og:updated_time" content="2016-11-14T07:36:27.648Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新出炉的面试题">
+<meta name="twitter:description" content="1.以下程序中打印结果是1234var i=999;i---;++i;console.log(i++);//999
+2.请写出输出结果12345var a=new Object();a.value=1;b=a;b.value=2;console,log(a.value);//2
+3.请写出输出结果12345for(var i=1;i&amp;lt;=3;i++)&amp;#123;setTimeout(funct">
+  
+    <link rel="alternative" href="/atom.xml" title="yangrs personal blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="https://yangrunshuang.github.io/img/1456278691276.png" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">yangrunshuang</a></h1>
+        </hgroup>
+
+        
+        
+        <form><input type="text" class="search" placeholder=" Search..."></form>
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/archives/">作品展示</a></li>
+                        
+                            <li><a href="/note/">我的随笔</a></li>
+                        
+                            <li><a href="/tags/">留言打卡</a></li>
+                        
+                            <li><a href="/about/">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/yangrs619@aliyun.com" title="Email"></a></li>
+                            
+                                <li id="新浪微博"><a class="新浪微博" target="_blank" href="/sina weibo" title="新浪微博"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="/yangrunshuang.github.io" title="GitHub"></a></li>
+                            
+                                <li id="知乎"><a class="知乎" target="_blank" href="/zhihu" title="知乎"></a></li>
+                            
+                                <li id="豆瓣"><a class="豆瓣" target="_blank" href="/douban" title="豆瓣"></a></li>
+                            
+                                <li id="Google"><a class="Google" target="_blank" href="/www.google.com" title="Google"></a></li>
+                            
+                                <li id="QQ"><a class="QQ" target="_blank" href="/qq" title="QQ"></a></li>
+                            
+                                <li id="微信"><a class="微信" target="_blank" href="/Wechat" title="微信"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="/yangrunshuang.github.io">GitHub</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">yangrunshuang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="https://yangrunshuang.github.io/img/1456278691276.png" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">yangrunshuang</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/archives/">作品展示</a></li>
+                
+                    <li><a href="/note/">我的随笔</a></li>
+                
+                    <li><a href="/tags/">留言打卡</a></li>
+                
+                    <li><a href="/about/">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/yangrs619@aliyun.com" title="Email"></a></li>
+                            
+                                <li id="新浪微博"><a class="新浪微博" target="_blank" href="/sina weibo" title="新浪微博"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="/yangrunshuang.github.io" title="GitHub"></a></li>
+                            
+                                <li id="知乎"><a class="知乎" target="_blank" href="/zhihu" title="知乎"></a></li>
+                            
+                                <li id="豆瓣"><a class="豆瓣" target="_blank" href="/douban" title="豆瓣"></a></li>
+                            
+                                <li id="Google"><a class="Google" target="_blank" href="/www.google.com" title="Google"></a></li>
+                            
+                                <li id="QQ"><a class="QQ" target="_blank" href="/qq" title="QQ"></a></li>
+                            
+                                <li id="微信"><a class="微信" target="_blank" href="/Wechat" title="微信"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-新出炉的面试题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/10/新出炉的面试题/" class="article-date">
+      <time datetime="2016-10-09T16:00:00.000Z" itemprop="datePublished">2016-10-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      新出炉的面试题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>1.以下程序中打印结果是<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i=<span class="number">999</span>;</div><div class="line">i---;</div><div class="line">++i;</div><div class="line"><span class="built_in">console</span>.log(i++);<span class="comment">//999</span></div></pre></td></tr></table></figure></p>
+<p>2.请写出输出结果<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">a.value=<span class="number">1</span>;</div><div class="line">b=a;</div><div class="line">b.value=<span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>,log(a.value);<span class="comment">//2</span></div></pre></td></tr></table></figure></p>
+<p>3.请写出输出结果<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;=<span class="number">3</span>;i++)&#123;</div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="built_in">console</span>.log(i);<span class="comment">//(答案为3个4)</span></div><div class="line">&#125;,<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4.请写出输出结果<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">var</span> deptIds=[<span class="number">1</span>,<span class="number">2</span>],</div><div class="line">   deptNames=[<span class="string">'技术部'</span>,<span class="string">'设计部'</span>],</div><div class="line">   dept=&#123;&#125;,</div><div class="line">   department=[];</div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;deptNames.length;i++)&#123;</div><div class="line">    dept.deptId=deptIds[i];</div><div class="line">    dept.deptName=deptNames[i];</div><div class="line">    department.push(dept);</div><div class="line">   &#125;</div><div class="line"><span class="built_in">console</span>.log(department);</div><div class="line"><span class="comment">//[&#123;deptId:2,deptName:'设计部'&#125;,&#123;deptId:2,deptName:'设计部'&#125;]</span></div></pre></td></tr></table></figure></p>
+<p>5.如何判断一个变量是否为数组类型（请考虑有效性和兼容性）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>   [].instanceof <span class="built_in">Array</span><span class="comment">//true</span></div><div class="line"><span class="number">2.</span>   arr.constructor===<span class="built_in">Array</span><span class="comment">//true</span></div><div class="line"><span class="number">3.</span>ES5:  <span class="built_in">Array</span>.isArray([])<span class="comment">//true</span></div><div class="line"><span class="number">4.</span><span class="built_in">Object</span>.prototype.toString.call([])===<span class="string">'[Object Array]'</span>;<span class="comment">//true</span></div><div class="line"><span class="number">5.</span>目前完美的解决方案</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">value</span>)</span>&#123;</div><div class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">Array</span>.isArray===<span class="string">'function'</span>)&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">Array</span>.isArray(value);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(value)===<span class="string">'[Object Array]'</span>;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>6.请编码计算以下两个给定日期相差几天<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dateDistance</span>(<span class="params">firstDate, secondDate</span>) </span>&#123;</div><div class="line">    <span class="comment">// 格式化两个日期</span></div><div class="line">    <span class="comment">//parseInt第二个参数表示进制</span></div><div class="line">    <span class="keyword">var</span> firstDate = <span class="built_in">parseInt</span>(dateDistance.calcDay(firstDate), <span class="number">10</span>);</div><div class="line">    <span class="keyword">var</span> secondDate = <span class="built_in">parseInt</span>(dateDistance.calcDay(secondDate), <span class="number">10</span>);</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.abs(secondDate - firstDate);</div><div class="line">&#125;</div><div class="line">dateDistance.calcDay = <span class="function"><span class="keyword">function</span> (<span class="params">date</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> (<span class="keyword">new</span> <span class="built_in">Date</span>(date)).getTime() / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> d1 = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">d1.setFullYear(<span class="number">2016</span>);</div><div class="line">d1.setMonth(<span class="number">3</span>);</div><div class="line">d1.setDate(<span class="number">6</span>);</div><div class="line"><span class="keyword">var</span> d2 = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">d2.setFullYear(<span class="number">2016</span>);</div><div class="line">d2.setMonth(<span class="number">1</span>);</div><div class="line">d2.setDate(<span class="number">15</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(dateDistance(d1, d2));</div></pre></td></tr></table></figure></p>
+<p>7.请编码实现：有数组var arr=<br>[1,2,3,4,5,6,7,8,9];如果要让该数组每次以随机顺序显示，给出你认为最高效的方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</div><div class="line">   <span class="keyword">var</span> len=arr.length;</div><div class="line">   <span class="keyword">var</span> tmp;</div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</div><div class="line">   <span class="keyword">var</span> oo=<span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*(len<span class="number">-1</span>)%(len<span class="number">-1</span>));</div><div class="line">    tmp=arr[i];</div><div class="line">    arr[i]=arr[oo];</div><div class="line">    arr[oo]=tmp;</div><div class="line">   &#125;</div><div class="line">   <span class="built_in">console</span>.log(arr);</div></pre></td></tr></table></figure></p>
+<p>8.css的五大主要选择器的作用都是什么？<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">一、*（通配符选择器）</div><div class="line">*通配符选择器，经常用于css reset，即样式重置，清理标签的默认样式，但现在一般不提倡直接使用*了，主要是*会匹配所有标签，相当耗资源。*在css的优先级中是最低的。</div><div class="line"></div><div class="line">* &#123;</div><div class="line">margin: 0;</div><div class="line">padding: 0;</div><div class="line">&#125;</div><div class="line">也可以用*来匹配某一元素下的所有子元素：</div><div class="line"></div><div class="line">#container * &#123;</div><div class="line">border: 1px solid black;</div><div class="line">&#125;</div><div class="line">二、#X （ID选择器）</div><div class="line"></div><div class="line">#+id名，这是日常常用的css选择器，用于匹配id为XXX的元素，id选择器的优势是精准，高优先级（优先级基数为100，远高于class的 10），作为javascript脚本钩子的不二选择，同样缺点也很明显优先级过高，重用性差，所以在使用id选择器前，我们最好问下自己，真的到了非用 id选择器的地步？</div><div class="line"></div><div class="line">#container &#123;</div><div class="line">width: 960px;</div><div class="line">margin: auto;</div><div class="line">&#125;</div><div class="line">三、.X （类选择器）</div><div class="line"></div><div class="line">.+class名，标准的样式选择器，与id选择器的区别是样式选择器可以选择多个元素。样式选择器是提倡使用的选择器，我想也是日常前端人员用到最多的选择器了。</div><div class="line"></div><div class="line">.error &#123;</div><div class="line">color: red;</div><div class="line">&#125;</div><div class="line">四、X Y （后代选择器）</div><div class="line"></div><div class="line">li a &#123;</div><div class="line">text-decoration: none;</div><div class="line">&#125;</div><div class="line">目前非常常用的css选择器，用于选取X元素下子元素Y，这里有个要留意的点是，这种方式的选择器将选取其下所有匹配的子元素，无视层级，所以有的情况 是不宜使用的，比如上述的代码去掉li下的所有a的下划线，但li里面还有个ul，我不希望ul下的li的a去掉下划线。</div><div class="line">使用此子孙选择器的时候要考虑是否希望某样式对所有子孙元素都起作用。</div><div class="line">这种子孙选择器还有个作用，就是创建类似命名空间的作用。比如上述代码样式的作用域明显为li。</div><div class="line"></div><div class="line">五、X （标签选择器）</div><div class="line"></div><div class="line">a &#123; color: red; &#125;</div><div class="line">ul &#123; margin-left: 0; &#125;</div><div class="line">标签选择器，优先级仅仅比*高，常用于css reset。</div></pre></td></tr></table></figure></p>
+<p>9.现在有一个手机端页面，页面很长且图片很多，你会以何种方式来实现这个页面，简单叙述一下这种实现方式的原理？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">见页面优化页面</div></pre></td></tr></table></figure></p>
+<p>10.如果让你从前端角度对一个网站做优化，你会从哪些方面着手？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>11.列举你使用过的公共库及插件,你对其做过哪些二次封装及优化<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>12.将一个表单的数据存入数据库，前端实现的详细思路都有什么，后端如何配合<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div></pre></td><td class="code"><pre><div class="line">1. HTML赋值</div><div class="line">2. JS赋值</div><div class="line">3. script填充JSON</div><div class="line">4. AJAX获取JSON</div><div class="line">5. WebSocket实时传输数据</div><div class="line">6. 总结</div><div class="line"></div><div class="line">1. HTML赋值</div><div class="line">输出到 Element 的 value 或 data-name </div><div class="line">&lt;input type="hidden" value="&lt;?php echo $user_avatar;?&gt;" /&gt;</div><div class="line">&lt;div data-value="&lt;?php echo $user_avatar;?&gt;"&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">渲染结果</div><div class="line">&lt;input type="hidden" value="https://avatars1.githubusercontent.com/u/3949015?v=3&amp;s=40" /&gt;</div><div class="line">&lt;div data-avatar="https://avatars1.githubusercontent.com/u/3949015?v=3&amp;s=40"&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">使用 JS 获取</div><div class="line">$('input').val();</div><div class="line">// http://jquery.bootcss.com/jQuery.data/</div><div class="line">$('div').data('avatar');</div><div class="line"></div><div class="line">优点：</div><div class="line">不占用全局变量，由 JS 自由获取。</div><div class="line"></div><div class="line"></div><div class="line">使用建议：</div><div class="line"></div><div class="line">适合传递简单数据，也非常适合多个简单数据与 Element 绑定关系。</div><div class="line"></div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;nimojs &lt;span data-userid="1" &gt;删除&lt;/span&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;nimo22 &lt;span data-userid="2" &gt;删除&lt;/span&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;nimo33 &lt;span data-userid="3" &gt;删除&lt;/span&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;nimo44 &lt;span data-userid="4" &gt;删除&lt;/span&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;nimo55 &lt;span data-userid="5" &gt;删除&lt;/span&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;script&gt;</div><div class="line">$('span').on('click',function()&#123;</div><div class="line">    $.post('/ajax/remove/',$(this).data('userid'),function(data)&#123;</div><div class="line">        // ...</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line"></div><div class="line">2. JS赋值</div><div class="line"></div><div class="line"></div><div class="line">将数据填充到 `&lt;script&gt;` 的 JavaScript 变量声明中。</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var user_avatar = "&lt;?php echo $user_avatar;?&gt;";</div><div class="line">// 渲染结果</div><div class="line">// var user_avatar = "https://avatars1.githubusercontent.com/u/3949015?v=3&amp;s=40";</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">或使用 Smarty 后端模板引擎：</div><div class="line">&lt;script&gt;</div><div class="line">var user_avatar = "&#123;$user_avatar&#125;";</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">优点：</div><div class="line">传递数据非常方便。前端直接调用 user_avatar 变量使用数据。</div><div class="line"></div><div class="line">缺点：</div><div class="line">1. 为了传递一个字符串数据占用了全局变量 `user_avatar`，当有很多数据需要传输时则会占用很多全局变量。</div><div class="line">2. 如果返回数据存在换行将会导致JS报错</div><div class="line"></div><div class="line">// 渲染结果有换行符</div><div class="line">var user_id = "</div><div class="line"></div><div class="line">https://avatars1.githubusercontent.com/u/3949015?v=3&amp;s=40";</div><div class="line">// Uncaught SyntaxError: Unexpected token ILLEGAL</div><div class="line"></div><div class="line">优化：</div><div class="line">可以通过指向的某一个变量存放所有后端返回的内容，最小程度占用全局变量。例：</div><div class="line">// PHP 代码</div><div class="line">var SERVER_DATA = &#123;</div><div class="line">    username: &#123;$username&#125;,</div><div class="line">    userid: &#123;$userid&#125;,</div><div class="line">    title: &#123;$title&#125;</div><div class="line">&#125;</div><div class="line">// 渲染结果</div><div class="line">var SERVER_DATA = &#123;</div><div class="line">    username: "NimoChu",</div><div class="line">    userid: 1,</div><div class="line">    title: 'F2E'</div><div class="line">&#125;</div><div class="line"></div><div class="line">使用建议：</div><div class="line">需要最快速度传递数据给 JS 并十分确定此数据稳定时，使用此方式。数据格式复杂的建议使用script填充JSON 或AJAX获取JSON 方法。</div><div class="line"></div><div class="line">3. script填充JSON</div><div class="line">JSON 语法</div><div class="line"></div><div class="line">填充 JSON 数据到 `&lt;script&gt;` 标签中，前端通过 DOM 获取 JSON字符串并解析成对象。</div><div class="line">&lt;script type="text/template" id="data"&gt;&#123;"username":"nimojs","userid":1&#125;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var data = JSON.parse($('#data').html());</div><div class="line">//&#123;username:"nimojs",userid:1&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">优点：</div><div class="line">页面加载完成后就可以获取到数据。不占用全局变量，可传递大量数据集合。</div><div class="line"></div><div class="line">缺点：</div><div class="line">数据量特别大时会导致页面初次加载变慢。变慢并不只是文件大小导致的，也因为服务器查询数据并返回合集是需要时间，可使用AJAX获取JSON完成按需加载和加载等待。</div><div class="line"></div><div class="line">使用建议：</div><div class="line">适合传递在DOM加载完成时就需要用到的大量数据集合。例如：前端控制页面渲染，后端将JSON数据源填充到 `&lt;script&gt;` 由前端使用 JavaScript模板引擎 进行页面渲染。</div><div class="line">如何选择Javascript模板引擎（javascript template engine)？</div><div class="line"></div><div class="line">4. AJAX获取JSON</div><div class="line">使用 AJAX 获取JSON数据</div><div class="line"></div><div class="line">&lt;span id="showdata"&gt;查看资料&lt;/span&gt;</div><div class="line">&lt;div style="display:none;" id="box"&gt;</div><div class="line">    &lt;h2&gt;用户信息&lt;/h2&gt;</div><div class="line">    &lt;p id="info"&gt;&lt;img src="loading.gif" /&gt;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">$('#showdata').on('click',function()&#123;</div><div class="line">    $('#box').show();</div><div class="line">    $.getJSON('/ajax/userdata/',function(oData)&#123;</div><div class="line">        // oData = &#123;"username":"nimojs","userid":1&#125;</div><div class="line">        $('#info').html('用户名：' + oData.username + '&lt;br&gt;用户ID：' + oData.userid);</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line">5.自定义属性</div><div class="line"></div><div class="line">    &lt;div id="hide_value" data-val="&#123;user_intern_status:'&lt;?php echo $user_intern_status;?&gt;'&#125;"&gt;</div><div class="line">    hide_value这个元素都可以用不着，直接在其父元素上定义就可以了。</div><div class="line">    获取就是 var data= xx.getJson($("#hide_value").attr('data-val')), </div><div class="line">    jQuery本身没有json处理函数</div></pre></td></tr></table></figure></p>
+<p>13.数据库操作</p>
+<pre><code>创建表：
+mysql&gt;create table employee921(id int primary key auto_increment,name varchar(50),salary bigint,deptid int);
+插入实验数据：
+mysql&gt;insert into employee921 values(null,&apos;zs&apos;,1000,1),
+(null,&apos;ls&apos;,1100,1),(null,&apos;ww&apos;,1100,1),
+(null,&apos;zl&apos;,900,1),(null,&apos;zl&apos;,1000,2),
+(null,&apos;zl&apos;,900,2),(null,&apos;zl&apos;,1000,2),
+(null,&apos;zl&apos;,1000,2);
+请编写sql语句实现以下功能：
+列出各个部门中工资高于本部门的平均工资的员工数和部门号，并按部门号排序
+</code></pre><p>14.请描述一下从哪几方面对数据库进行优化<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>、 表的设计要规范，即要符合数据库设计三范式。</div><div class="line"><span class="number">2</span>、 适当建立索引，在频繁作为检索条件，更新较少的字段上建立索引，以提高查询速度。</div><div class="line"><span class="number">3</span>、 分表查询，有水平分割、垂直分割。</div><div class="line"><span class="number">4</span>、 读写分离，读(read)、写(create、update、<span class="keyword">delete</span>)。</div><div class="line"><span class="number">5</span>、建立存储过程。</div></pre></td></tr></table></figure></p>
+<p>15.对数组排序，你能想到哪些方法，请编码实现其中一种<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//排序算法</span></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> array = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">44</span>,<span class="number">4</span>,</div><div class="line">                <span class="number">324</span>,<span class="number">5</span>,<span class="number">65</span>,<span class="number">6</span>,<span class="number">6</span>,</div><div class="line">                <span class="number">34</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">2</span>,</div><div class="line">                <span class="number">43</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">62</span>,<span class="number">43</span>,</div><div class="line">                <span class="number">5</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">51</span>,<span class="number">56</span>,</div><div class="line">                <span class="number">76</span>,<span class="number">7</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">1</span>,</div><div class="line">                <span class="number">45</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line">    <span class="comment">//var array = [4,2,5,1,0,3];</span></div><div class="line">    array = sorting.shellSort(array);</div><div class="line">    alert(array);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">var</span> sorting = &#123;</div><div class="line">    <span class="comment">//利用sort方法进行排序</span></div><div class="line">    systemSort: <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> a-b;</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line"> </div><div class="line">    <span class="comment">//冒泡排序</span></div><div class="line">    bubbleSort: <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> len=arr.length, tmp;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;len<span class="number">-1</span>;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;len<span class="number">-1</span>-i;j++)&#123;</div><div class="line">                <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</div><div class="line">                    tmp = arr[j];</div><div class="line">                    arr[j] = arr[j+<span class="number">1</span>];</div><div class="line">                    arr[j+<span class="number">1</span>] = tmp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> arr;</div><div class="line">    &#125;,</div><div class="line"> </div><div class="line">    <span class="comment">//快速排序</span></div><div class="line">    quickSort: <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> low=<span class="number">0</span>, high=arr.length<span class="number">-1</span>;</div><div class="line">        sort(low,high);</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">sort</span>(<span class="params">low, high</span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(low&lt;high)&#123;</div><div class="line">                <span class="keyword">var</span> mid = (<span class="function"><span class="keyword">function</span>(<span class="params">low, high</span>)</span>&#123;</div><div class="line">                    <span class="keyword">var</span> tmp = arr[low];</div><div class="line">                    <span class="keyword">while</span>(low&lt;high)&#123;</div><div class="line">                        <span class="keyword">while</span>(low&lt;high&amp;&amp;arr[high]&gt;=tmp)&#123;</div><div class="line">                            high--;</div><div class="line">                        &#125;</div><div class="line">                        arr[low] = arr[high];</div><div class="line">                        <span class="keyword">while</span>(low&lt;high&amp;&amp;arr[low]&lt;=tmp)&#123;</div><div class="line">                            low++;</div><div class="line">                        &#125;</div><div class="line">                        arr[high] = arr[low];</div><div class="line">                    &#125;</div><div class="line">                    arr[low] = tmp;</div><div class="line">                    <span class="keyword">return</span> low;</div><div class="line">                &#125;)(low, high);</div><div class="line">                sort(low, mid<span class="number">-1</span>);</div><div class="line">                sort(mid+<span class="number">1</span>,high);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> arr;</div><div class="line">    &#125;,</div><div class="line"> </div><div class="line">    <span class="comment">//插入排序</span></div><div class="line">    insertSort: <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> len = arr.length;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</div><div class="line">            <span class="keyword">var</span> tmp = arr[i];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> j=i<span class="number">-1</span>;j&gt;=<span class="number">0</span>;j--)&#123;</div><div class="line">                <span class="keyword">if</span>(tmp&lt;arr[j])&#123;</div><div class="line">                    arr[j+<span class="number">1</span>] = arr[j];</div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    arr[j+<span class="number">1</span>] = tmp;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> arr;</div><div class="line">    &#125;,</div><div class="line"> </div><div class="line">    <span class="comment">//希尔排序</span></div><div class="line">    shellSort: <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(arr);</div><div class="line">        <span class="keyword">var</span> h = <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(h&lt;=arr.length/<span class="number">3</span>)&#123;</div><div class="line">            h = h*<span class="number">3</span>+<span class="number">1</span>;  <span class="comment">//O(n^(3/2))by Knuth,1973</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>( ;h&gt;=<span class="number">1</span>;h=<span class="built_in">Math</span>.floor(h/<span class="number">3</span>))&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> k=<span class="number">0</span>;k&lt;h;k++)&#123;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">var</span> i=h+k;i&lt;arr.length;i+=h)&#123;</div><div class="line">                    <span class="keyword">for</span>(<span class="keyword">var</span> j=i;j&gt;=h&amp;&amp;arr[j]&lt;arr[j-h];j-=h)&#123;</div><div class="line">                        <span class="keyword">var</span> tmp = arr[j];</div><div class="line">                        arr[j] = arr[j-h];</div><div class="line">                        arr[j-h] = tmp;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> arr;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/10/10/新出炉的面试题/">新出炉的面试题</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 yangrunshuang 的个人博客">yangrunshuang</a></p>
+        <p><span>发布时间:</span>2016年10月10日 - 00时00分</p>
+        <p><span>最后更新:</span>2016年11月14日 - 15时36分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/10/新出炉的面试题/" title="新出炉的面试题">http://yangrunshuang.github.io/2016/10/10/新出炉的面试题/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yangrunshuang.github.io/2016/10/10/新出炉的面试题/　　作者: yangrunshuang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/11/02/页面优化相关考虑/">
+                    页面优化
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/09/10/nodeJs/">
+                    NodeJS
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+    <style>
+        .toc {
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $(".toc li a").mouseover(function() {
+                var title = $(this).attr('href');
+                $(this).attr("title", title);
+            });
+        })
+    </script>
+
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/11/02/页面优化相关考虑/" title="上一篇: 页面优化">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/09/10/nodeJs/" title="下一篇: NodeJS">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/canvas炫酷特效/">canvas炫酷特效</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/canvas炫酷特效/">canvas炫酷特效</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/页面优化相关考虑/">页面优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/新出炉的面试题/">新出炉的面试题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/nodeJs/">NodeJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/05/markdown/">markdown介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/03/git&SeaJs studyNote/">git&SeaJs</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/07/10/http服务器/">服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/06/25/JS常见面试题/">JS常见面试题</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/06/20/git&github studyNote/">git&github</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/05/10/面试题汇总/">面试题汇总</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+        <script>
+            var yiliaConfig = {
+            fancybox: true,
+            mathjax: true,
+            animate: true,
+            isHome: false,
+            isPost: true,
+            isArchive: false,
+            isTag: false,
+            isCategory: false,
+            open_in_new: false
+            }
+        </script>
+        
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 yangrunshuang
+            </div>
+            <div class="footer-right">
+                <a href="https://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+            </div>
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 10;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
