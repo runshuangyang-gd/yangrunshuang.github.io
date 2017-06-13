@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立方体</title>
+    <style>
+        body,div{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height:660px;
+            background-color: #000;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-animation:mydhua 30s ease infinite;
+            -o-animation:mydhua 30s ease infinite;
+            animation:mydhua 30s ease infinite;
+        }
+        div{
+            width:300px;
+            height:300px;
+            text-align: center;
+            position: absolute;
+            left:50%;
+            top: 50%;
+            text-align: center;
+            line-height: 300px;
+            margin:-150px 0 0 -150px;
+            text-shadow: 0px 0px 10px #fff,0px 0px 20px #fff,0px 0px 30px #fff,0px 0px 40px #ff00de,0px 0px 70px #ff00de,0px 0px 80px #ff00de,0px 0px 100px #ff00de,0px 0px 150px #ff00de;
+            color:white;
+            font-size: 100px;
+            font-weight:bold;
+        }
+        @-webkit-keyframes mydhua{
+
+            0%{-webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-webkit-transform-origin: center center;}
+            100%{-webkit-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);-webkit-transform-origin: center center; }
+        }
+        @-moz-keyframes mydhua{
+
+            0%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);-webkit-transform-origin: center center;}
+            100%{-moz-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg); -webkit-transform-origin: center center;}
+        }
+        .front{
+            background-color: rgba(0,179,238,0.3);
+            -webkit-transform: translateZ(150px);
+            -moz-transform: translateZ(150px);
+            -ms-transform: translateZ(150px);
+            -o-transform: translateZ(150px);
+            transform: translateZ(150px);
+        }
+        .back{
+            background-color: rgba(10,57,116,0.3);
+            -webkit-transform: translateZ(-150px);
+            -moz-transform: translateZ(-150px);
+            -ms-transform: translateZ(-150px);
+            -o-transform: translateZ(-150px);
+            transform: translateZ(-150px);
+        }
+        .up{
+            background-color: rgba(0,238,0,0.3);
+            -webkit-transform: rotatex(-90deg) translatez(-150px);
+            -moz-transform: rotatex(-90deg) translatez(-150px);
+            -ms-transform: rotatex(-90deg) translatez(-150px);
+            -o-transform: rotatex(-90deg) translatez(-150px);
+            transform: rotatex(-90deg) translatez(-150px);
+        }
+        .down{
+            background-color: rgba(123,0,123,0.3);
+            -webkit-transform:  rotatex(90deg) translatez(-150px);
+            -moz-transform: rotatex(90deg) translatez(-150px);
+            -ms-transform: rotatex(90deg) translatez(-150px);
+            -o-transform: rotatex(90deg) translatez(-150px);
+            transform: rotatex(90deg) translatez(-150px);
+        }
+        .left{
+            background-color: rgba(153,0,115,0.3);
+            -webkit-transform: rotatey(-90deg) translatez(150px);
+            -moz-transform: rotatey(-90deg) translatez(150px);
+            -ms-transform: rotatey(-90deg) translatez(150px);
+            -o-transform: rotatey(-90deg) translatez(150px);
+            transform: rotatey(-90deg) translatez(150px);
+        }
+        .right{
+            background-color: rgba(221,17,68,0.3);
+            -webkit-transform: rotatey(90deg) translatez(150px);
+            -moz-transform: rotatey(90deg) translatez(150px);
+            -ms-transform: rotatey(90deg) translatez(150px);
+            -o-transform: rotatey(90deg) translatez(150px);
+            transform: rotatey(90deg) translatez(150px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="front">许</div>
+    <div class="back">你</div>
+    <div class="up">一</div>
+    <div class="down">世</div>
+    <div class="left">芳</div>
+    <div class="right">华</div>
+
+</body>
+</html>
